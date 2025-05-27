@@ -1,9 +1,8 @@
 from django.core.management.base import BaseCommand
-from dataentry.models import Student
 from django.apps import apps
 import csv
 
-# Proposed Command : pythonmanage.py importdata file_path
+# Proposed Command : pythonmanage.py importdata file_path model_name
 
 class Command(BaseCommand):
     help = 'Import data from CSV file'
