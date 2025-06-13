@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <h2 class="text-center">Import Data to Database</h2>
+        {% include "alerts.html" %}
         <div style="display: flex; justify-content: center;">
             <form action="{% url 'import_data' %}" method="POST" enctype="multipart/form-data" style="max-width: fit-content;">
                 {% csrf_token %}
@@ -23,7 +24,6 @@
                     <label for="file_path">Upload CSV file</label>
                     <input type="file" name="file_path" class="form-control" required>
                 </div>
-
                 <div class="form-group">
                     <label for="model_name">Select Database table</label>
                     <select name="model_name" class="form-control" required>
@@ -34,6 +34,7 @@
                     </select>
                 </div>
                 <input type="submit" value="Import Data" class="btn btn-success">
+                
             </form>
         </div>
     </div>
