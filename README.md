@@ -4,7 +4,7 @@ This guide explains how to set up a Django project called **Automate the Boring 
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - Git (optional)
@@ -14,13 +14,13 @@ This guide explains how to set up a Django project called **Automate the Boring 
 
 ---
 
-## 📦 1. Install VS Code
+## 1. Install VS Code
 
 Download and install from: [Link](https://code.visualstudio.com/download)
 
 ---
 
-## 📁 2. Create Project Folder & Virtual Environment
+## 2. Create Project Folder & Virtual Environment
 
 ```bash
 mkdir automate-the-boring-stuff
@@ -36,7 +36,7 @@ env\Scripts\activate         # Windows
 
 ---
 
-## 🌐 3. Install Django in virtual Environment
+## 3. Install Django in virtual Environment
 
 ```bash
 pip install django
@@ -44,7 +44,7 @@ pip install django
 
 ---
 
-## 🏱 4. Create and Migrate Models
+## 4. Create and Migrate Models
 
 After writing your models in `models.py`, run below commands to sync the changes with the database:
 
@@ -55,7 +55,7 @@ python manage.py migrate
 
 ---
 
-## 📁 5. Import/Export CSV via Custom Commands
+## 5. Import/Export CSV via Custom Commands
 
 Create commands in:
 
@@ -76,13 +76,13 @@ python manage.py exportdata model_name
 
 ---
 
-## 🐌 6. Problem: Importing Millions of Rows Takes ~7 Minutes
+## 6. Problem: Importing Millions of Rows Takes ~7 Minutes
 
 To handle large imports asynchronously and improve responsiveness, we use **Celery + Redis**.
 
 ---
 
-## 🚀 7. Install Celery and Redis Python Packages
+## 7. Install Celery and Redis Python Packages
 
 ```bash
 pip install celery redis
@@ -127,7 +127,7 @@ __all__ = ('celery_app',)
 
 ---
 
-## 🍎 macOS: Redis Setup
+## macOS: Redis Setup
 
 ```bash
 brew install redis
@@ -164,7 +164,7 @@ brew services stop redis
 
 ---
 
-## 🐧 Ubuntu (Linux): Redis Setup
+## Ubuntu (Linux): Redis Setup
 
 ```bash
 sudo apt update
@@ -200,11 +200,11 @@ PONG
 
 ---
 
-## 🦠 Windows: Redis Setup
+## Windows: Redis Setup
 
 Windows does **not** officially support Redis. Use **one of the following**:
 
-### ✅ Option 1: WSL (Recommended)
+### Option 1: WSL (Recommended)
 
 Install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), then install Redis inside Ubuntu:
 
@@ -213,7 +213,7 @@ sudo apt update
 sudo apt install redis
 ```
 
-### ✅ Option 2: Docker
+### Option 2: Docker
 
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and run:
 
@@ -231,7 +231,7 @@ PONG
 
 ---
 
-## 🏃 Start Celery Worker
+## Start Celery Worker
 
 ```bash
 celery -A automate_the_boring_stuff worker --loglevel=info --pool=solo   # Use 'solo' on Windows
@@ -242,7 +242,7 @@ celery -A automate_the_boring_stuff worker --loglevel=info --pool=solo   # Use '
 
 ---
 
-## 📌 Example Command Flow
+## Example Command Flow
 
 ```bash
 python manage.py import_csv
@@ -251,7 +251,7 @@ python manage.py import_csv
 
 ---
 
-## ✅ Project is Ready!
+## Project is Ready!
 
 You now have:
 
