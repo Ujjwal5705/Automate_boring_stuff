@@ -74,12 +74,9 @@ python manage.py importdata file_path model_name
 python manage.py exportdata model_name
 ```
 
----
-
 ## 6. Problem: Importing Millions of Rows Takes ~7 Minutes
 
 To handle large imports asynchronously and improve responsiveness, we use **Celery + Redis**.
-
 ---
 
 ## 7. Install Celery and Redis Python Packages
