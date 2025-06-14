@@ -207,11 +207,30 @@ echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://pack
 sudo apt-get update
 sudo apt-get install redis
 ```
+
+---
+
+Lastly, start the Redis server like so:
+```bash
+sudo service redis-server start
+```
+
+Once Redis is running, you can test it by running redis-cli:
+```bash
+redis-cli
+```
+Test the connection with the ping command:
+```bash
+127.0.0.1:6379> ping
+PONG
+```
+
 It would look like this :
 
 ---
 [![Screenshot-2025-06-14-143759.png](https://i.postimg.cc/CLnfcgFq/Screenshot-2025-06-14-143759.png)](https://postimg.cc/JGmnhSHr)
 [![Screenshot-2025-06-14-143814.png](https://i.postimg.cc/K8X3VHzs/Screenshot-2025-06-14-143814.png)](https://postimg.cc/N5402bR1)
+
 
 ## Start Celery Worker
 
