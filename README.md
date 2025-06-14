@@ -12,13 +12,9 @@ This guide explains how to set up a Django project called **Automate the Boring 
 - Celery
 - VS Code (as code editor)
 
----
-
 ## 1. Install VS Code
 
 Download and install from: [Link](https://code.visualstudio.com/download)
-
----
 
 ## 2. Create Project Folder & Virtual Environment
 
@@ -34,15 +30,11 @@ source env/bin/activate      # macOS/Linux
 env\Scripts\activate         # Windows
 ```
 
----
-
 ## 3. Install Django in virtual Environment
 
 ```bash
 pip install django
 ```
-
----
 
 ## 4. Create and Migrate Models
 
@@ -52,8 +44,6 @@ After writing your models in `models.py`, run below commands to sync the changes
 python manage.py makemigrations
 python manage.py migrate
 ```
-
----
 
 ## 5. Import/Export CSV via Custom Commands
 
@@ -76,8 +66,9 @@ python manage.py exportdata model_name
 
 ## 6. Problem: Importing Millions of Rows Takes ~7 Minutes
 
+```
 To handle large imports asynchronously and improve responsiveness, we use **Celery + Redis**.
----
+```
 
 ## 7. Install Celery and Redis Python Packages
 
