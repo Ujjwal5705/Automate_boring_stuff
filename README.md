@@ -234,12 +234,23 @@ It would look like this :
 
 ## Start Celery Worker
 
+Below command will work in macOS/Linux only
+Celery uses prefork by default, which works only on Unix systems.
 ```bash
-celery -A automate_the_boring_stuff worker --loglevel=info --pool=solo   # Use 'solo' on Windows
+celery -A automate_the_boring_stuff worker --loglevel=info
 ```
 
+On Windows, you need to explicitly use the solo pool (single-threaded, no multiprocessing)
 - `--pool=solo` is required for Windows due to lack of `fork()`.
-- On macOS/Linux, default is fine.
+- solo uses a single thread and avoids these issues but is not suitable for production (only development/testing).
+```bash
+celery -A awd_main worker --loglevel=info --pool=solo
+```
+
+Note: Make sure you set the Celery broker url to localhost 6379 in settings.py and redis server is running in background
+```bash
+CELERY_BROKER_URL = 'redis://localhost:6379'
+```
 
 ---
 
