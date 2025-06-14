@@ -193,34 +193,25 @@ PONG
 
 ## Windows: Redis Setup
 
-Windows does **not** officially support Redis. Use **one of the following**:
+Windows does **not** officially support Redis. Use the following method. It worked for me :)
 
-### Option 1: WSL (Recommended)
+### WSL
 
 Install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), then install Redis inside Ubuntu:
 
+Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+After that use the following command for Redis setup
 ```bash
-sudo apt update
-sudo apt install redis
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
 ```
-
-### Option 2: Docker
-
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and run:
-
-```bash
-docker run -d -p 6379:6379 redis
-```
-
-To test:
-
-```bash
-docker exec -it <container_id> redis-cli
-127.0.0.1:6379> ping
-PONG
-```
+It would look like this :
 
 ---
+[![Screenshot-2025-06-14-143759.png](https://i.postimg.cc/CLnfcgFq/Screenshot-2025-06-14-143759.png)](https://postimg.cc/JGmnhSHr)
+[![Screenshot-2025-06-14-143814.png](https://i.postimg.cc/K8X3VHzs/Screenshot-2025-06-14-143814.png)](https://postimg.cc/N5402bR1)
 
 ## Start Celery Worker
 
