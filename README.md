@@ -68,9 +68,8 @@ python manage.py exportdata model_name
 
 ```
 To handle large imports asynchronously and improve responsiveness, we use **Celery + Redis**.
-[![Screenshot-2025-06-14-141228.png](https://i.postimg.cc/sg1gDPLC/Screenshot-2025-06-14-141228.png)](https://postimg.cc/dhPY5Cv5)
-
 ```
+[![Screenshot-2025-06-14-141228.png](https://i.postimg.cc/sg1gDPLC/Screenshot-2025-06-14-141228.png)](https://postimg.cc/dhPY5Cv5)
 
 ## 7. Install Celery and Redis Python Packages
 
