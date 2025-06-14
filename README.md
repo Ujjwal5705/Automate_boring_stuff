@@ -16,7 +16,7 @@ This guide explains how to set up a Django project called **Automate the Boring 
 
 ## 📦 1. Install VS Code
 
-Download and install from: [Link]([https://code.visualstudio.com/](https://code.visualstudio.com/download))
+Download and install from: [Link](https://code.visualstudio.com/download))
 
 ---
 
