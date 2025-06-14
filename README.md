@@ -252,16 +252,19 @@ Note: Make sure you set the Celery broker url to localhost 6379 in settings.py a
 CELERY_BROKER_URL = 'redis://localhost:6379'
 ```
 
+After all, your terminal should look like this:
 ---
+[![Screenshot-2025-06-14-150322.png](https://i.postimg.cc/QCw0KZDr/Screenshot-2025-06-14-150322.png)](https://postimg.cc/m13QKqhd)
 
 ## Example Command Flow
 
 ```bash
-python manage.py import_csv
+python manage.py importdata file_path moel_name
 # This triggers the task and Celery handles it in the background
 ```
 
 ---
+
 
 ## Project is Ready!
 
