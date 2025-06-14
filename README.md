@@ -1,4 +1,4 @@
-# Automate the Boring Stuff — Django Project with Celery & Redis
+# Automate the Boring Stuff
 
 This guide explains how to set up a Django project called **Automate the Boring Stuff** on **macOS**, **Ubuntu**, and **Windows**, including virtual environments, database migrations, and async CSV import/export using Celery and Redis.
 
