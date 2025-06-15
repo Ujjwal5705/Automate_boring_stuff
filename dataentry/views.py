@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .utils import get_all_custom_models
+from .utils import get_all_custom_models, check_csv_errors
 from uploads.models import Upload
 from django.contrib import messages
 from .tasks import import_command
@@ -16,6 +16,13 @@ def import_data(request):
 
         # file path
         file_path = str(upload.file.path)
+
+        # Check for CSV errors
+        try:
+            check_csv_errors(file_path, model_name)
+        except Exception as e:
+            messages.error(request, str(e))
+            return redirect('import_data')
 
         # Trigger importdata command
         import_command.delay(file_path, model_name)
