@@ -1,6 +1,9 @@
 from django.apps import apps
-import csv
 from django.db.utils import DataError
+from django.core.mail import EmailMessage
+from django.conf import settings
+import csv
+
 
 def get_all_custom_models():
     default_models = ['LogEntry', 'Permission', 'Group', 'User', 'ContentType', 'Session', 'Upload']
@@ -33,3 +36,13 @@ def check_csv_errors(file_path, model_name):
         except LookupError:
             continue     #Continue if model is not found
     return model
+
+
+def send_email_notification(mail_subject, message):
+    try:
+        from_email = settings.DEFAULT_FROM_EMAIL
+        to_email = settings.DEFAULT_TO_EMAIL
+        mail = EmailMessage(mail_subject, message, from_email, to=[to_email])
+        mail.send()
+    except Exception as e:
+        raise e
