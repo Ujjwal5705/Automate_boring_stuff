@@ -15,9 +15,19 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Automate with Django</a>
+            <div>
+                <a href="#" class="float-right text-decoration-none text-dark">Login</a>
+                <a href="#" class="float-right text-decoration-none btn btn-success">Register</a>
+            </div>
+        </div>
+    </nav>
+
     {% block content %}
-    
+    <!-- HTML content goes here -->
     {% endblock content %}
-    
+
 </body>
 </html>

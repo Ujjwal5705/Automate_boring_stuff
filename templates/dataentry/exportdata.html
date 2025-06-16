@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
     {% block content %}
-    <div class="container">
-        <h2 class="text-center">Export Data from Database</h2>
+    <div class="container alert-success mt-5 shadow" style="max-width: 500px; padding: 50px; border-radius: 10px;">
+        <h2 class="text-center mb-4">Export Data from Database</h2>
         {% include "alerts.html" %}
         <div style="display: flex; justify-content: center;">
-            <form action="{% url 'export_data' %}" method="POST" style="max-width: fit-content;">
+            <form action="{% url 'export_data' %}" method="POST" style="width: 350px;">
                 {% csrf_token %}
                 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label for="model_name">Select Database table</label>
                     <select name="model_name" class="form-control" required>
                         <option value="" disabled selected>Select</option>
@@ -17,7 +17,10 @@
                         {% endfor %}
                     </select>
                 </div>
-                <input type="submit" value="Export Data" class="btn btn-success">
+                
+                <div class="form-group">
+                    <input type="submit" value="Export Data" class="btn btn-success">
+                </div>
             </form>
         </div>
     </div>
