@@ -1,6 +1,6 @@
 from awd_main.celery import app
 from django.core.management import call_command
-from .utils import send_email_notification
+from .utils import send_email_notification, generate_csv_file
 
 
 @app.task
@@ -22,10 +22,12 @@ def export_command(model_name):
     try:
         call_command('exportdata', model_name)
 
+        file_path = generate_csv_file(model_name)
+
         # Success mail with attachment
         mail_subject = 'Export Data Completed ✅'
         message = 'Your data has been exported successfully.'
-        send_email_notification(mail_subject, message)
+        send_email_notification(mail_subject, message, attachment=file_path)
         return 'Data exported successfully'
     except Exception as e:
         raise e
