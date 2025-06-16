@@ -2,7 +2,9 @@ from django.shortcuts import render,redirect
 from .utils import get_all_custom_models, check_csv_errors
 from uploads.models import Upload
 from django.contrib import messages
-from .tasks import import_command
+from .tasks import import_command, export_command
+from django.http import HttpResponse
+
 
 # Create your views here.
 
@@ -37,3 +39,22 @@ def import_data(request):
             "custom_models": custom_models,
         }
         return render(request, 'dataentry/importdata.html', context)
+
+
+def export_data(request):
+    if request.method == 'POST':
+        model_name = request.POST.get('model_name')
+
+        # Trigger exportdata command
+        export_command.delay(model_name)
+
+        # Show the message to the user
+        messages.success(request, 'Your file is being exported. You will be notified once it is done.')
+
+        return redirect('export_data')
+    else:
+        custom_models = get_all_custom_models()
+        context = {
+            "custom_models": custom_models,
+        }
+    return render(request, 'dataentry/exportdata.html', context)
