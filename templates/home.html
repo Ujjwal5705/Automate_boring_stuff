@@ -1,1 +1,104 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container mt-5" style="max-width: 1000px;">
+    <h2 class="text-center" style="margin-bottom: 50px;">Automate The Boring Stuff with Django</h2>
+    <div style="margin-bottom: 50px; margin-top: 30px;">
+        <div class="row row-cols-3">
+            <div class="col">
+                    <a href="{% url 'import_data' %}" class="text-decoration-none text-dark">
+                        <div class="card alert-info shadow">
+                            <div class="card-header">
+                                <h4>Import Data</h4>
+                            </div>
+                            <div class="card-body">
+                                Imports data from csv file to the table
+                            </div>
+                        </div>
+                    </a>
+            </div>
+            <div class="col">
+                <a href="{% url 'export_data' %}" class="text-decoration-none text-dark">
+                    <div class="card alert-success shadow">
+                        <div class="card-header">
+                            <h4>Export Data</h4>
+                        </div>
+                        <div class="card-body">
+                            Export data from a table to a csv file
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="card alert-danger shadow">
+                        <div class="card-header">
+                            <h4>Bulk Emails</h4>
+                        </div>
+                        <div class="card-body">
+                            Sends bulk emails to users
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row row-cols-3">
+            <div class="col">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="card alert-warning shadow">
+                        <div class="card-header">
+                            <h4>Email Tracking</h4>
+                        </div>
+                        <div class="card-body">
+                            Track emails and shows open and click rate
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="card alert-danger shadow">
+                        <div class="card-header">
+                            <h4>Compress Images</h4>
+                        </div>
+                        <div class="card-body">
+                            Compresses image files and reduces the size
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="card alert-warning shadow">
+                        <div class="card-header">
+                            <h4>Web Scraping</h4>
+                        </div>
+                        <div class="card-body">
+                            Scrapes websites for useful information
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<div class="container mt-5" style="max-width: 1000px;">
+    <h2 class="text-center" style="margin-bottom: 40px;">Automate The Boring Stuff with Django</h2>
+    <p style="color: gray;">"Automate the Boring Stuff with Django" is a project-based course to build various tools using the Django framework to automate routine tasks, ranging from data processing to scheduling, and more. By leveraging Django's capabilities, users can streamline their workflows, saving time and enhancing productivity.</p>
+</div>
+<div class="text-center">
+    <a href="{% url 'login' %}" class="float-right text-decoration-none btn btn-primary">Login</a>
+    <a href="{% url 'register' %}" class="float-right text-decoration-none btn btn-success">Register</a>
+</div>
+
+{% endif %}
+
+{% endblock content %}
