@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'emails',
     'crispy_forms',
     'crispy_bootstrap5',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -159,6 +160,14 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 DEFAULT_FROM_EMAIL = 'Automate boring stuff <Sharmaujjwal5705@gmail.com>'
 DEFAULT_TO_EMAIL = 'Sharmaujjwal5706@gmail.com'
 
-
+# Cripsy forms and bootstrap5
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+# Ckeditor configuration
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',
+#     }, 
+# }

@@ -1,6 +1,7 @@
 from django.apps import apps
 from django.db.utils import DataError
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMultiAlternatives
+from django.utils.html import strip_tags
 from django.conf import settings
 import pendulum
 import csv
@@ -43,7 +44,15 @@ def check_csv_errors(file_path, model_name):
 def send_email_notification(mail_subject, message, to_email, attachment=None):
     try:
         from_email = settings.DEFAULT_FROM_EMAIL
-        mail = EmailMessage(mail_subject, message, from_email, to=[to_email])
+        text_message = strip_tags(message)
+        mail = EmailMultiAlternatives(
+            subject=mail_subject,
+            body=text_message,
+            from_email=from_email,
+            to=[to_email]
+        )
+        mail.attach_alternative(message, "text/html")
+
         if attachment is not None:
             mail.attach_file(attachment)
         mail.send()
