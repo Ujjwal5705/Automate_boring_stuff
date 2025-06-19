@@ -10,7 +10,7 @@ class List(models.Model):
         return self.list
 
 
-class Subscriber(models.Model):
+class Subscriber(models .Model):
     list = models.ForeignKey(List, on_delete=models.CASCADE)
     email_address = models.EmailField(max_length=50)
 

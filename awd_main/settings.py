@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'ckeditor',
+    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -152,22 +153,27 @@ MESSAGE_TAGS = {
 CELERY_BROKER_URL = 'redis://localhost:6379'
 
 # SMTP Configuration
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
-DEFAULT_FROM_EMAIL = 'Automate boring stuff <Sharmaujjwal5705@gmail.com>'
+# EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_PORT = config('EMAIL_PORT', cast=int)
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+DEFAULT_FROM_EMAIL = 'Automate with Django <sharmaujjwal5705@gmail.com>'
 DEFAULT_TO_EMAIL = 'Sharmaujjwal5706@gmail.com'
 
 # Cripsy forms and bootstrap5
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+# anymail
+EMAIL_BACKEND = "anymail.backends.brevo.EmailBackend"
+ANYMAIL = {
+    "BREVO_API_KEY": config('BREVO_API_KEY'),
+}
 
 # Ckeditor configuration
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': 'full',
-#     }, 
-# }
+CKEDITOR_CONFIGS = {
+    'default': {
+        'height': 150,
+    }, 
+}
