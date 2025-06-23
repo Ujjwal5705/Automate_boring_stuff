@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="mt-4 mb-3 text-center">Email Statistics</h2>
+    <div class="card col-md-8 mx-auto">
+        <div class="card-header">
+            <div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Total emails sent: <b>{{total_count}}</b><br>
+                        Sent at: <b>{{email.sent_at}}</b>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        Opened: <b>{{email.open_rate}}%</b><br>
+                        Clicked: <b>{{email.click_rate}}%</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>{{email.subject}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mail-body">
+                        {{email.body | safe}}
+                    </div>
+                    <div class="attachment mb-3">
+                        {% if email.attachment %}
+                            <img src="{{email.attachment.url}}" alt="Email Attachment">
+                        {% else %}
+                            <div>No attachment</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

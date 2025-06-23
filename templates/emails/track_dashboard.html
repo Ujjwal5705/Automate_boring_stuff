@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="mt-4 mb-4 text-center">Email Engagement Tracking</h2>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Subject</th>
+                <th scope="col">List</th>
+                <th scope="col">Total Sent</th>
+                <th scope="col">Events</th>
+                <th scope="col">Sent at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in emails %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td><a href="{% url 'track_stats' m.id %}">{{m}}</a></td>
+                    <td>{{m.list}}</td>
+                    <td>{{m.total_count}}</td>
+                    <td>
+                        <div>{{m.open_rate}}% Opened</div>
+                        <div>{{m.click_rate}}% Clicked</div>
+                    </td>
+                    <td>{{m.sent_at}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

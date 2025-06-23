@@ -12,7 +12,7 @@ def import_command(file_path, model_name):
         mail_subject = 'Import Data Completed ✅'
         message = 'Your data has been imported successfully.'
         to_email = settings.DEFAULT_TO_EMAIL
-        send_email_notification(mail_subject, message, to_email)
+        send_email_notification(mail_subject, message, [to_email])
         return 'Data imported successfully'
     except Exception as e:
         raise e
@@ -29,7 +29,7 @@ def export_command(model_name):
         mail_subject = 'Export Data Completed ✅'
         message = 'Your data has been exported successfully.'
         to_email = settings.DEFAULT_TO_EMAIL
-        send_email_notification(mail_subject, message, to_email, attachment=file_path)
+        send_email_notification(mail_subject, message, [to_email], attachment=file_path)
         return 'Data exported successfully'
     except Exception as e:
         raise e
