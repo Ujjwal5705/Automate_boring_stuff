@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'ckeditor',
     'anymail',
+    'image_compression',
 ]
 
 MIDDLEWARE = [

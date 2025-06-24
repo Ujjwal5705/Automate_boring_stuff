@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-5 shadow" style="max-width: 500px; padding: 40px; border-radius: 10px;">
+        <h2 class="text-center mb-3">Compress Images</h2>
+        {% include "alerts.html" %}
+        <div style="display: flex; justify-content: center;">
+            <form action="{% url 'compress' %}" method="POST" enctype="multipart/form-data" style="max-width: fit-content;">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                    {{form | crispy}}
+                </div>
+                <div class="form-group mt-4">
+                    <input type="submit" value="Compress" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
