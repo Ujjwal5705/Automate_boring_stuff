@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'dal',
+    'dal_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'anymail',
     'image_compression',
+    'web_scraping',
 ]
 
 MIDDLEWARE = [
@@ -180,6 +183,6 @@ CKEDITOR_CONFIGS = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://dd82-223-233-73-92.ngrok-free.app"
+    "https://173b-223-233-73-123.ngrok-free.app"
 ]
-BASE_URL = "https://dd82-223-233-73-92.ngrok-free.app"
+BASE_URL = "https://173b-223-233-73-123.ngrok-free.app"

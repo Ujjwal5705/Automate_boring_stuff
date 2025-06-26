@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    <div class="container mt-5 shadow" style="max-width: 750px; padding: 20px; border-radius: 10px;">
+        <h3>{{stock_data.stock.name}} ({{stock_data.stock.symbol}})</h3>
+        <h3 style="font-weight: 800; margin-right: 10px;">{{stock_data.current_price}}
+            <span style="font-size: large;" class="{% if '-' in stock_data.price_change %}text-danger{% else %}text-success{% endif %}">{{stock_data.price_change}}</span>
+            <span style="font-size: large;" class="{% if '-' in stock_data.price_change %}text-danger{% else %}text-success{% endif %}">({{stock_data.percent_change}})</span>
+        </h3>
+        <span>{{stock_data.stock.exchange}} Listed - {% if stock_data.stock.exchange == 'NSE' %}India{% else %}United States{% endif %}</span>
+        <hr>
+        <table class="table table-hover" style="margin: auto; max-width: 600px;">
+            <tbody>
+                <tr>
+                    <td>Previous Close:</td>
+                    <td>{{stock_data.previous_close}}</td>
+                </tr>
+                <tr>
+                    <td>52 Week High:</td>
+                    <td>{{stock_data.week_52_high}}</td>
+                </tr>
+                <tr>
+                    <td>52 Week Low:</td>
+                    <td>{{stock_data.week_52_low}}</td>
+                </tr>
+                <tr>
+                    <td>Market Cap:</td>
+                    <td>{{stock_data.market_cap}}</td>
+                </tr>
+                <tr>
+                    <td>P/E Ratio:</td>
+                    <td>{{stock_data.pe_ratio}}</td>
+                </tr>
+                <tr>
+                    <td>Dividend Yield:</td>
+                    <td>{{stock_data.dividend_yield}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <a href="{% url 'stock' %}" type="button" class="btn btn-primary">Check Another Stock</a>
+    </div>
+    {% endblock content %}
