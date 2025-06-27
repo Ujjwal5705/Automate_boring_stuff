@@ -43,7 +43,7 @@ def scrap_stock_data(symbol, exchange):
         try:
             response = requests.get(url, headers=headers)
             soup = BeautifulSoup(response.content, 'html.parser')
-            stock_price = '$' + soup.find("span", class_="value").text
+            stock_price = soup.find("bg-quote", class_="value").text
             previous_close = soup.find("td", class_="table__cell u-semi").text
             price_change = soup.find("span", class_="change--point--q").text
             percent_change = soup.find("span", class_="change--percent--q").text
@@ -70,4 +70,4 @@ def scrap_stock_data(symbol, exchange):
             raise e        
     
  
-scrap_stock_data('tsla', 'nasdaq')
+scrap_stock_data('wipro', 'nse')
