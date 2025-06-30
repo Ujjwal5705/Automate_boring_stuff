@@ -381,3 +381,34 @@ This feature allows users to upload and compress image files directly from the b
 > Great for reducing file sizes before sharing or uploading images elsewhere.
 
 [![Whats-App-Image-2025-06-30-at-6-03-43-PM.jpg](https://i.postimg.cc/zG06qfxm/Whats-App-Image-2025-06-30-at-6-03-43-PM.jpg)](https://postimg.cc/gxLNDG94)
+
+## Stock Data Scraper (MarketWatch – NASDAQ & NSE)
+
+This feature scrapes real-time stock data from the [MarketWatch](https://www.marketwatch.com/) website using `requests` and `BeautifulSoup`.
+
+### How It Works:
+- The user provides a **stock symbol** (e.g., `AAPL` or `RELIANCE`).
+- Based on the selected exchange (**NASDAQ** or **NSE**), the system builds the correct URL:
+  - `https://www.marketwatch.com/investing/stock/<SYMBOL>` for NASDAQ
+  - `https://www.marketwatch.com/investing/stock/<SYMBOL>.NS` for NSE
+- The backend sends a request to MarketWatch and parses the HTML response to extract:
+- **Current Price** – The latest traded price of the stock.
+- **Previous Close** – The closing price from the previous trading day.
+- **Price Change** – The difference between the current and previous price.
+- **Percent Change** – The percentage gain or loss in price.
+- **52-Week Low** – The lowest price in the past year.
+- **52-Week High** – The highest price in the past year.
+- **Market Cap** – The total market capitalization of the company.
+- **P/E Ratio** – Price-to-Earnings ratio based on recent earnings.
+- **Dividend Yield** – The dividend yield percentage for the stock.
+
+### Technologies Used:
+- `requests` – to fetch the web page
+- `BeautifulSoup` – to parse HTML and extract data
+- Clean error handling for invalid symbols or network issues
+
+> Useful for integrating live stock insights into dashboards, alerts, or investment tools.
+
+[![Whats-App-Image-2025-06-30-at-6-23-49-PM.jpg](https://i.postimg.cc/C1m9xxhn/Whats-App-Image-2025-06-30-at-6-23-49-PM.jpg)](https://postimg.cc/PpvS6h8d)
+[![Whats-App-Image-2025-06-30-at-6-23-50-PM-1.jpg](https://i.postimg.cc/7hRcStTx/Whats-App-Image-2025-06-30-at-6-23-50-PM-1.jpg)](https://postimg.cc/dZ84YBBX)
+[![Whats-App-Image-2025-06-30-at-6-24-51-PM.jpg](https://i.postimg.cc/K8BVgNc2/Whats-App-Image-2025-06-30-at-6-24-51-PM.jpg)](https://postimg.cc/BjZNr21Y)
