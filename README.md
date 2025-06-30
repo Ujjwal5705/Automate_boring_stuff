@@ -328,7 +328,7 @@ The project includes a fully functional **user registration and login system** b
 [![Whats-App-Image-2025-06-30-at-3-33-55-PM.jpg](https://i.postimg.cc/FRBdghP2/Whats-App-Image-2025-06-30-at-3-33-55-PM.jpg)](https://postimg.cc/tZF49GG5)
 [![Whats-App-Image-2025-06-30-at-3-33-55-PM-1.jpg](https://i.postimg.cc/wjXN88vm/Whats-App-Image-2025-06-30-at-3-33-55-PM-1.jpg)](https://postimg.cc/68QqnPCW)
 
-## 📩 Bulk Email Sending with CKEditor and Sendinblue
+## Bulk Email Sending with CKEditor and Sendinblue
 
 This feature allows users to send rich, formatted emails to multiple recipients at once.
 
@@ -347,7 +347,7 @@ This feature allows users to send rich, formatted emails to multiple recipients 
 [![Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg](https://i.postimg.cc/ZnPLf91W/Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg)](https://postimg.cc/ctHYCJ1W)
 [![Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg](https://i.postimg.cc/nL5TMf4h/Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg)](https://postimg.cc/ns4qw5Sy)
 
-## 🌐 Ngrok Integration for Email Tracking Testing
+## Ngrok Integration for Email Tracking Testing
 
 To test email open and click tracking on a local development server, **Ngrok** is integrated.
 
@@ -364,3 +364,5 @@ To test email open and click tracking on a local development server, **Ngrok** i
 
 > Ensures accurate testing of open and click tracking features before deployment.
 
+[![Whats-App-Image-2025-06-30-at-6-00-20-PM.jpg](https://i.postimg.cc/KzYWKhsK/Whats-App-Image-2025-06-30-at-6-00-20-PM.jpg)](https://postimg.cc/06Ln3Fvx)
+[![Whats-App-Image-2025-06-30-at-6-00-20-PM-1.jpg](https://i.postimg.cc/zf7MXGpZ/Whats-App-Image-2025-06-30-at-6-00-20-PM-1.jpg)](https://postimg.cc/066ZVxLc)
