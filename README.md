@@ -265,12 +265,19 @@ python manage.py importdata file_path moel_name
 
 ---
 
+## 📨 Email on Import Completion
 
-## Project is Ready!
+After a CSV import completes, the user receives an email from the default sender email configured in `settings.py`.
 
-You now have:
+### Step 1: Setup Email Configuration
 
-- A Django app with async capabilities  
-- CSV import/export custom commands  
-- Background task processing using Celery  
-- Redis setup tailored for your OS
+In your `settings.py`, add the following:
+
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'your_email@gmail.com'
+EMAIL_HOST_PASSWORD = 'your_app_password'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
