@@ -412,3 +412,9 @@ This feature scrapes real-time stock data from the [MarketWatch](https://www.mar
 [![Whats-App-Image-2025-06-30-at-6-23-49-PM.jpg](https://i.postimg.cc/C1m9xxhn/Whats-App-Image-2025-06-30-at-6-23-49-PM.jpg)](https://postimg.cc/PpvS6h8d)
 [![Whats-App-Image-2025-06-30-at-6-23-50-PM-1.jpg](https://i.postimg.cc/7hRcStTx/Whats-App-Image-2025-06-30-at-6-23-50-PM-1.jpg)](https://postimg.cc/dZ84YBBX)
 [![Whats-App-Image-2025-06-30-at-6-24-51-PM.jpg](https://i.postimg.cc/K8BVgNc2/Whats-App-Image-2025-06-30-at-6-24-51-PM.jpg)](https://postimg.cc/BjZNr21Y)
+
+---
+
+🙏 **Thank you for checking out this project!**  
+Feel free to contribute, open issues, or suggest improvements.
+
