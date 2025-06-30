@@ -3,8 +3,6 @@
 Developed six automation tools using Django. Built a stock market analysis tool, web scraping system, image compression utility, bulk email sender with open/click tracking, and import/export tools. Integrated Celery and Redis for async task handling, used Brevo (Sendinblue) for transactional emails, CKEditor for rich text input. Used Ngrok for local tunneling, processed 1M+ records, and enabled bulk emailing with attachments.
 
 ---
-
-[![Whats-App-Image-2025-06-30-at-3-33-55-PM-4.jpg](https://i.postimg.cc/TPQW1Vn2/Whats-App-Image-2025-06-30-at-3-33-55-PM-4.jpg)](https://postimg.cc/mczr6FdK)
 [![Whats-App-Image-2025-06-30-at-3-33-55-PM-3.jpg](https://i.postimg.cc/gJJLZxKV/Whats-App-Image-2025-06-30-at-3-33-55-PM-3.jpg)](https://postimg.cc/bG7vXNWr)
 
 ## Prerequisites
