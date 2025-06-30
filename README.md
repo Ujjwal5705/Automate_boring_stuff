@@ -284,7 +284,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ```
 > If using Gmail, enable 2FA and use an App Password instead of your actual account password.
 
-# Working:
+### Working:
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM.jpg](https://i.postimg.cc/3xVRWtcZ/Whats-App-Image-2025-06-30-at-3-02-33-PM.jpg)](https://postimg.cc/pmQx6Jx9)
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM-1.jpg](https://i.postimg.cc/NfNLvs8S/Whats-App-Image-2025-06-30-at-3-02-33-PM-1.jpg)](https://postimg.cc/QHTjpryJ)
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM-2.jpg](https://i.postimg.cc/jSL2spZ5/Whats-App-Image-2025-06-30-at-3-02-33-PM-2.jpg)](https://postimg.cc/JsCMx2wV)
@@ -301,9 +301,11 @@ This feature allows users to export data from the database and receive it via em
 
 > Ideal for large exports, background processing, and improving user efficiency.
 
-# Working
+### Working
 
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM.jpg](https://i.postimg.cc/wjLvyXY8/Whats-App-Image-2025-06-30-at-3-18-27-PM.jpg)](https://postimg.cc/fVWZ10bB)
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM-2.jpg](https://i.postimg.cc/g0K24G0g/Whats-App-Image-2025-06-30-at-3-18-27-PM-2.jpg)](https://postimg.cc/v1cyZFfn)
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM-1.jpg](https://i.postimg.cc/GhZtmMNx/Whats-App-Image-2025-06-30-at-3-18-27-PM-1.jpg)](https://postimg.cc/4mQs81XY)
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM-3.jpg](https://i.postimg.cc/R0m0cWv3/Whats-App-Image-2025-06-30-at-3-18-27-PM-3.jpg)](https://postimg.cc/dhWvFtkv)
+
+
