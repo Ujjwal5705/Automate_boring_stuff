@@ -1,8 +1,11 @@
 # Automate the Boring Stuff
 
-This guide explains how to set up a Django project called **Automate the Boring Stuff** on **macOS**, **Ubuntu**, and **Windows**, including virtual environments, database migrations, and async CSV import/export using Celery and Redis.
+Developed six automation tools using Django. Built a stock market analysis tool, web scraping system, image compression utility, bulk email sender with open/click tracking, and import/export tools. Integrated Celery and Redis for async task handling, used Brevo (Sendinblue) for transactional emails, CKEditor for rich text input. Used Ngrok for local tunneling, processed 1M+ records, and enabled bulk emailing with attachments.
 
 ---
+
+[![Whats-App-Image-2025-06-30-at-3-33-55-PM-4.jpg](https://i.postimg.cc/TPQW1Vn2/Whats-App-Image-2025-06-30-at-3-33-55-PM-4.jpg)](https://postimg.cc/mczr6FdK)
+[![Whats-App-Image-2025-06-30-at-3-33-55-PM-3.jpg](https://i.postimg.cc/gJJLZxKV/Whats-App-Image-2025-06-30-at-3-33-55-PM-3.jpg)](https://postimg.cc/bG7vXNWr)
 
 ## Prerequisites
 
@@ -301,7 +304,7 @@ This feature allows users to export data from the database and receive it via em
 
 > Ideal for large exports, background processing, and improving user efficiency.
 
-### Working
+### Working:
 
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM.jpg](https://i.postimg.cc/wjLvyXY8/Whats-App-Image-2025-06-30-at-3-18-27-PM.jpg)](https://postimg.cc/fVWZ10bB)
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM-2.jpg](https://i.postimg.cc/g0K24G0g/Whats-App-Image-2025-06-30-at-3-18-27-PM-2.jpg)](https://postimg.cc/v1cyZFfn)
@@ -309,3 +312,15 @@ This feature allows users to export data from the database and receive it via em
 [![Whats-App-Image-2025-06-30-at-3-18-27-PM-3.jpg](https://i.postimg.cc/R0m0cWv3/Whats-App-Image-2025-06-30-at-3-18-27-PM-3.jpg)](https://postimg.cc/dhWvFtkv)
 
 
+## User Registration and Login (with Crispy Forms)
+
+The project includes a fully functional **user registration and login system** built using Django's authentication framework and **Crispy Forms** for styling.
+
+- Users can **register** with an email and password.
+- Registered users can **log in** securely to access authenticated parts of the site.
+- All forms are styled using **Django Crispy Forms**, providing a clean and responsive UI without writing custom HTML or CSS.
+- Feedback is provided via form validation errors and success messages.
+
+> This ensures a smooth and user-friendly authentication experience.
+
+### Working:
