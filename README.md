@@ -288,3 +288,16 @@ If using Gmail, enable 2FA and use an App Password instead of your actual accoun
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM.jpg](https://i.postimg.cc/3xVRWtcZ/Whats-App-Image-2025-06-30-at-3-02-33-PM.jpg)](https://postimg.cc/pmQx6Jx9)
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM-1.jpg](https://i.postimg.cc/NfNLvs8S/Whats-App-Image-2025-06-30-at-3-02-33-PM-1.jpg)](https://postimg.cc/QHTjpryJ)
 [![Whats-App-Image-2025-06-30-at-3-02-33-PM-2.jpg](https://i.postimg.cc/jSL2spZ5/Whats-App-Image-2025-06-30-at-3-02-33-PM-2.jpg)](https://postimg.cc/JsCMx2wV)
+
+
+## Email on Export Completion with CSV Attachment
+
+This feature allows users to export data from the database and receive it via email with the exported file attached.
+
+- When a user initiates an export, the task runs asynchronously using **Celery** to avoid blocking the application in case millions of rows a re present.
+- Once the export is complete, a **CSV file** containing the exported data is generated.
+- The system automatically sends an **email** to the user with the CSV file **attached**.
+- This ensures a smooth user experience where data is delivered reliably without manual download steps.
+
+> Ideal for large exports, background processing, and improving user efficiency.
+
