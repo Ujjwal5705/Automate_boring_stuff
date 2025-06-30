@@ -271,7 +271,7 @@ After a CSV import completes, the user receives an email from the default sender
 
 ### Step 1: Setup Email Configuration
 
-In your `settings.py`, add the following:
+In your `settings.py`, add the following and 
 
 ```python
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -281,3 +281,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your_email@gmail.com'
 EMAIL_HOST_PASSWORD = 'your_app_password'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+```
+If using Gmail, enable 2FA and use an App Password instead of your actual account password.
+
+
