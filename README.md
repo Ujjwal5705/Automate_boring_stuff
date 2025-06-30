@@ -346,3 +346,21 @@ This feature allows users to send rich, formatted emails to multiple recipients 
 [![Whats-App-Image-2025-06-30-at-4-00-01-PM.jpg](https://i.postimg.cc/G3vz3NHb/Whats-App-Image-2025-06-30-at-4-00-01-PM.jpg)](https://postimg.cc/CdLbmcG2)
 [![Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg](https://i.postimg.cc/ZnPLf91W/Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg)](https://postimg.cc/ctHYCJ1W)
 [![Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg](https://i.postimg.cc/nL5TMf4h/Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg)](https://postimg.cc/ns4qw5Sy)
+
+## 🌐 Ngrok Integration for Email Tracking Testing
+
+To test email open and click tracking on a local development server, **Ngrok** is integrated.
+
+### Why Ngrok?
+- Email clients cannot load tracking pixels or links from `localhost`.
+- Ngrok exposes your local Django server over the internet using a secure public URL (e.g., `https://random-id.ngrok.io`).
+
+### How It Works:
+- Ngrok is started on your local Django server port (usually 8000).
+- The public Ngrok URL is used in:
+  - Tracking pixel URLs (`/emails/track/open/`)
+  - Click tracking links (`/emails/track/click/`)
+- This makes it possible to test email interactions from real email clients like Gmail or Outlook during development.
+
+> Ensures accurate testing of open and click tracking features before deployment.
+
