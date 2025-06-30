@@ -362,7 +362,22 @@ To test email open and click tracking on a local development server, **Ngrok** i
   - Click tracking links (`/emails/track/click/`)
 - This makes it possible to test email interactions from real email clients like Gmail or Outlook during development.
 
-> Ensures accurate testing of open and click tracking features before deployment.
 
 [![Whats-App-Image-2025-06-30-at-6-00-20-PM.jpg](https://i.postimg.cc/KzYWKhsK/Whats-App-Image-2025-06-30-at-6-00-20-PM.jpg)](https://postimg.cc/06Ln3Fvx)
 [![Whats-App-Image-2025-06-30-at-6-00-20-PM-1.jpg](https://i.postimg.cc/zf7MXGpZ/Whats-App-Image-2025-06-30-at-6-00-20-PM-1.jpg)](https://postimg.cc/066ZVxLc)
+
+## Image Compression (with Auto Download)
+
+This feature allows users to upload and compress image files directly from the browser.
+
+### How It Works:
+- Users upload an image and select a desired **quality level**.
+- The backend uses **Pillow (PIL)** to:
+  - Open and convert the image to JPEG.
+  - Compress the image based on the selected quality.
+  - Save the compressed version associated with the logged-in user.
+- After compression, the image is **automatically downloaded** to the user's device.
+
+> Great for reducing file sizes before sharing or uploading images elsewhere.
+
+[![Whats-App-Image-2025-06-30-at-6-03-43-PM.jpg](https://i.postimg.cc/zG06qfxm/Whats-App-Image-2025-06-30-at-6-03-43-PM.jpg)](https://postimg.cc/gxLNDG94)
