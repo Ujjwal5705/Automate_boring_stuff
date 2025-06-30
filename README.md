@@ -327,3 +327,22 @@ The project includes a fully functional **user registration and login system** b
 
 [![Whats-App-Image-2025-06-30-at-3-33-55-PM.jpg](https://i.postimg.cc/FRBdghP2/Whats-App-Image-2025-06-30-at-3-33-55-PM.jpg)](https://postimg.cc/tZF49GG5)
 [![Whats-App-Image-2025-06-30-at-3-33-55-PM-1.jpg](https://i.postimg.cc/wjXN88vm/Whats-App-Image-2025-06-30-at-3-33-55-PM-1.jpg)](https://postimg.cc/68QqnPCW)
+
+## 📩 Bulk Email Sending with CKEditor and Sendinblue
+
+This feature allows users to send rich, formatted emails to multiple recipients at once.
+
+- Users can compose emails using **CKEditor**, a WYSIWYG HTML editor integrated into the Django form.
+- The message supports styling, images, links, and rich formatting.
+- On submission, the email is sent to a list of recipients using **Sendinblue** (Brevo) as the email backend.
+- All emails are sent in bulk with a single click, improving efficiency when communicating with many users.
+
+> Ideal for newsletters, announcements, or batch notifications with clean formatting.
+
+### Working:
+
+[![Whats-App-Image-2025-06-30-at-4-00-01-PM-2.jpg](https://i.postimg.cc/2yNwFdXp/Whats-App-Image-2025-06-30-at-4-00-01-PM-2.jpg)](https://postimg.cc/hzMTKmBM)
+[![Whats-App-Image-2025-06-30-at-4-00-01-PM-3.jpg](https://i.postimg.cc/Hxyzyvz4/Whats-App-Image-2025-06-30-at-4-00-01-PM-3.jpg)](https://postimg.cc/3432MBPd)
+[![Whats-App-Image-2025-06-30-at-4-00-01-PM.jpg](https://i.postimg.cc/G3vz3NHb/Whats-App-Image-2025-06-30-at-4-00-01-PM.jpg)](https://postimg.cc/CdLbmcG2)
+[![Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg](https://i.postimg.cc/ZnPLf91W/Whats-App-Image-2025-06-30-at-4-00-02-PM.jpg)](https://postimg.cc/ctHYCJ1W)
+[![Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg](https://i.postimg.cc/nL5TMf4h/Whats-App-Image-2025-06-30-at-4-00-01-PM-1.jpg)](https://postimg.cc/ns4qw5Sy)
