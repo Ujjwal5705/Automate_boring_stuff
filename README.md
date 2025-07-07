@@ -70,7 +70,7 @@ python manage.py exportdata model_name
 ```
 To handle large imports asynchronously and improve responsiveness, we use **Celery + Redis**.
 ```
-<img src="https://i.postimg.cc/sg1gDPLC/Screenshot-2025-06-14-141228.png" height=300 width=500><img/>
+<img src="https://i.postimg.cc/sg1gDPLC/Screenshot-2025-06-14-141228.png"><img/>
 
 [![Screenshot-2025-06-14-141348.png](https://i.postimg.cc/DzXf1vFC/Screenshot-2025-06-14-141348.png)](https://postimg.cc/yJ7zHzD9)
 [![Screenshot-2025-06-14-141422.png](https://i.postimg.cc/Mp4KcMkM/Screenshot-2025-06-14-141422.png)](https://postimg.cc/CRGVXKxS)
