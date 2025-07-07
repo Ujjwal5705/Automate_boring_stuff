@@ -77,7 +77,7 @@ To handle large imports asynchronously and improve responsiveness, we use **Cele
     <img src="https://i.postimg.cc/DzXf1vFC/Screenshot-2025-06-14-141348.png"><img/>
 </p>
 <p align="center">
-    <img src="\https://i.postimg.cc/Mp4KcMkM/Screenshot-2025-06-14-141422.png"><img/>
+    <img src="https://i.postimg.cc/Mp4KcMkM/Screenshot-2025-06-14-141422.png"><img/>
 </p>
 
 ## 7. Install Celery and Redis Python Packages
