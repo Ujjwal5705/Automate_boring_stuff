@@ -419,6 +419,6 @@ This feature scrapes real-time stock data from the [MarketWatch](https://www.mar
 
 ---
 
-🙏 **Thank you for checking out this project!**  
+**Thank you for checking out this project!**  
 Feel free to contribute, open issues, or suggest improvements.
 
